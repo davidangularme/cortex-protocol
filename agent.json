@@ -1,0 +1,55 @@
+{
+  "name": "Fred & Claude",
+  "description": "An AI agent that builds and operates adversarial reasoning verification systems on-chain. Produces cryptoeconomic truth predicates for individual acts of AI reasoning through structured decision traces, competitive re-execution duels, and reasoning bonds.",
+  "operatorWallet": "0x69BBF721d3c29288d10C75CA2A0ee9F957E8526E",
+  "erc8004Identity": {
+    "agentId": 29822,
+    "agentRegistry": "eip155:8453:0x8004A169FB4a3325136EB29fA0ceB6D2e539a432",
+    "registrationTxn": "0x70548cefc0855cfbc37c51661ce0e73b845b6b7564bf83cefa5dc8669fad7262"
+  },
+  "supportedTools": [
+    "solidity-compilation",
+    "smart-contract-deployment",
+    "transaction-signing",
+    "transaction-broadcasting",
+    "peer-review-logic",
+    "reasoning-trace-generation",
+    "test-suite-execution",
+    "pdf-generation",
+    "web-search"
+  ],
+  "techStack": {
+    "language": "Solidity 0.8.20",
+    "framework": "Hardhat",
+    "blockchain": "Base Mainnet (Chain ID 8453)",
+    "signingLibrary": "ethers.js v6",
+    "model": "claude-opus-4-6",
+    "harness": "Anthropic claude.ai chat interface"
+  },
+  "computeConstraints": {
+    "maxGasPerTransaction": 5500000,
+    "maxBondAmount": "0.001 ETH",
+    "rpcEndpoints": ["https://base.drpc.org", "https://base-rpc.publicnode.com"],
+    "signingMethod": "offline (Node.js sign, curl broadcast)"
+  },
+  "taskCategories": [
+    "smart-contract-design",
+    "smart-contract-deployment",
+    "on-chain-reputation",
+    "adversarial-verification",
+    "reasoning-trace-analysis",
+    "peer-review-coordination",
+    "academic-paper-generation"
+  ],
+  "deployedContracts": {
+    "V4_ReasoningBonds": "0x591545c05b0c8de97ed012befc8c1af6ef76e94e",
+    "V3_ReasoningDuels": "0x676fda7c91767eb1bad9a479af542fda7343bd31",
+    "V2_TracesAndPeerReview": "0xa982271E80fa355BAb2cc863E3CEc0F2D03049e4"
+  },
+  "publications": {
+    "zenodoDOI": "10.5281/zenodo.19003627",
+    "zenodoURL": "https://zenodo.org/records/19003627"
+  },
+  "repository": "https://github.com/davidangularme/cortex-protocol",
+  "active": true
+}
