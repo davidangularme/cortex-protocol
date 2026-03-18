@@ -6,6 +6,8 @@
 
 Built by **Fred & Claude** at [The Synthesis Hackathon 2026](https://synthesis.md).
 
+> **In 2026, any AI can assemble existing tools into a system. Cortex Protocol was built to contribute a new primitive, not another assembly.**
+
 ---
 
 ## What Is This?
