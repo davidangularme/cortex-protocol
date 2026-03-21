@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#0f1a0f"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" style="stop-color:#00ff88;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#00ff88;stop-opacity:0"/>
+    </linearGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="40"/></filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Glow effects -->
+  <circle cx="300" cy="315" r="200" fill="#00ff88" opacity="0.06" filter="url(#blur)"/>
+  <circle cx="900" cy="315" r="200" fill="#00ff88" opacity="0.04" filter="url(#blur)"/>
+
+  <!-- Grid lines -->
+  <g stroke="#00ff88" stroke-opacity="0.06" stroke-width="1">
+    <line x1="0" y1="157" x2="1200" y2="157"/>
+    <line x1="0" y1="315" x2="1200" y2="315"/>
+    <line x1="0" y1="473" x2="1200" y2="473"/>
+    <line x1="300" y1="0" x2="300" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="900" y1="0" x2="900" y2="630"/>
+  </g>
+
+  <!-- Flow: Trace → Duel → Bond → Verdict -->
+
+  <!-- Node 1: Trace -->
+  <circle cx="180" cy="315" r="52" fill="none" stroke="#00ff88" stroke-width="2" opacity="0.8"/>
+  <circle cx="180" cy="315" r="52" fill="#00ff88" opacity="0.08"/>
+  <text x="180" y="310" text-anchor="middle" fill="#00ff88" font-family="monospace" font-size="14" font-weight="bold">DECISION</text>
+  <text x="180" y="330" text-anchor="middle" fill="#00ff88" font-family="monospace" font-size="14" font-weight="bold">TRACE</text>
+
+  <!-- Arrow 1 -->
+  <line x1="240" y1="315" x2="340" y2="315" stroke="#00ff88" stroke-width="2" opacity="0.5"/>
+  <polygon points="340,310 355,315 340,320" fill="#00ff88" opacity="0.5"/>
+
+  <!-- Node 2: Duel -->
+  <circle cx="420" cy="315" r="52" fill="none" stroke="#ffc800" stroke-width="2" opacity="0.8"/>
+  <circle cx="420" cy="315" r="52" fill="#ffc800" opacity="0.08"/>
+  <text x="420" y="310" text-anchor="middle" fill="#ffc800" font-family="monospace" font-size="14" font-weight="bold">REASONING</text>
+  <text x="420" y="330" text-anchor="middle" fill="#ffc800" font-family="monospace" font-size="14" font-weight="bold">DUEL</text>
+
+  <!-- Arrow 2 -->
+  <line x1="480" y1="315" x2="580" y2="315" stroke="#ffc800" stroke-width="2" opacity="0.5"/>
+  <polygon points="580,310 595,315 580,320" fill="#ffc800" opacity="0.5"/>
+
+  <!-- Node 3: Bond -->
+  <circle cx="660" cy="315" r="52" fill="none" stroke="#ff3c3c" stroke-width="2" opacity="0.8"/>
+  <circle cx="660" cy="315" r="52" fill="#ff3c3c" opacity="0.08"/>
+  <text x="660" y="310" text-anchor="middle" fill="#ff3c3c" font-family="monospace" font-size="14" font-weight="bold">REASONING</text>
+  <text x="660" y="330" text-anchor="middle" fill="#ff3c3c" font-family="monospace" font-size="14" font-weight="bold">BOND</text>
+
+  <!-- Arrow 3 -->
+  <line x1="720" y1="315" x2="820" y2="315" stroke="#ff3c3c" stroke-width="2" opacity="0.5"/>
+  <polygon points="820,310 835,315 820,320" fill="#ff3c3c" opacity="0.5"/>
+
+  <!-- Node 4: Verdict -->
+  <circle cx="900" cy="315" r="52" fill="none" stroke="#00ff88" stroke-width="2.5" opacity="1"/>
+  <circle cx="900" cy="315" r="52" fill="#00ff88" opacity="0.12"/>
+  <text x="900" y="310" text-anchor="middle" fill="#00ff88" font-family="monospace" font-size="14" font-weight="bold">TRUTH</text>
+  <text x="900" y="330" text-anchor="middle" fill="#00ff88" font-family="monospace" font-size="14" font-weight="bold">VERDICT</text>
+
+  <!-- Labels below nodes -->
+  <text x="180" y="390" text-anchor="middle" fill="#666" font-family="monospace" font-size="11">V2: 0xa982..V4</text>
+  <text x="420" y="390" text-anchor="middle" fill="#666" font-family="monospace" font-size="11">V3: 0x676f..31</text>
+  <text x="660" y="390" text-anchor="middle" fill="#666" font-family="monospace" font-size="11">V4: 0x5915..e4</text>
+  <text x="900" y="390" text-anchor="middle" fill="#666" font-family="monospace" font-size="11">Base Mainnet</text>
+
+  <!-- Title -->
+  <text x="600" y="100" text-anchor="middle" fill="#00ff88" font-family="monospace" font-size="36" font-weight="bold" letter-spacing="4">CORTEX PROTOCOL</text>
+  <text x="600" y="135" text-anchor="middle" fill="#666" font-family="monospace" font-size="15" letter-spacing="2">Adversarial Reasoning Bonds — A Cryptoeconomic Truth Predicate</text>
+
+  <!-- Bottom text -->
+  <text x="600" y="510" text-anchor="middle" fill="#444" font-family="monospace" font-size="12">Bond Value &gt; Obfuscation Cost → Trust emerges from survived attacks</text>
+
+  <!-- Bottom bar -->
+  <rect x="100" y="555" width="1000" height="1" fill="#00ff88" opacity="0.15"/>
+  <text x="150" y="580" fill="#555" font-family="monospace" font-size="11">Built by Fred &amp; Claude</text>
+  <text x="600" y="580" text-anchor="middle" fill="#555" font-family="monospace" font-size="11">DOI: 10.5281/zenodo.19003627</text>
+  <text x="1050" y="580" text-anchor="end" fill="#555" font-family="monospace" font-size="11">The Synthesis 2026</text>
+
+  <!-- Corner decorations -->
+  <path d="M0,0 L40,0 L0,40 Z" fill="#00ff88" opacity="0.15"/>
+  <path d="M1200,630 L1160,630 L1200,590 Z" fill="#00ff88" opacity="0.15"/>
+</svg>
