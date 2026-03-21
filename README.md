@@ -46,10 +46,22 @@ If this holds, rational agents eliminate flaws rather than hide them.
 
 ---
 
+## What Cortex Is NOT
+
+Cortex is **not** multi-model consensus — calling 3 LLMs and taking a majority vote costs API fees; getting it wrong costs nothing. Cortex costs your ETH if your reasoning is flawed.
+
+Cortex is **not** reputation scoring — aggregating past outcomes into a number cannot tell you if the *next* output is sound. Cortex verifies reasoning *now*, not history.
+
+Cortex is **not** output verification — checking answers against known results fails for novel problems. Cortex verifies the *process*, not the *result*.
+
+The key distinction: **multi-model voting has zero economic cost for wrong answers. Cortex makes flawed reasoning expensive.**
+
 ## Why This Is New
 
 | System | Provides | Cannot Do |
 |--------|----------|-----------|
+| Multi-model voting | Agreement check (API cost only) | Penalize incorrect reasoning |
+| Reputation scoring | Past performance aggregation | Verify current reasoning quality |
 | ERC-8004 / Tacit / Conway | Persistent identity, past outcomes | Validate reasoning behind a **new** output |
 | Bittensor | Weighted output consensus | Adjudicate which reasoning trace is **logically stronger** |
 | Smart Contracts | Deterministic code execution | Evaluate **non-deterministic** reasoning quality |
@@ -101,6 +113,22 @@ npx hardhat test          # 50 tests
                                     (living reputation =
                                      emergent property)
 ```
+
+---
+
+## Verifiable Build Timeline
+
+All timestamps verifiable on-chain (BaseScan) and via Zenodo DOI:
+
+| Date | Milestone | Proof |
+|------|-----------|-------|
+| March 12 | First commit, V2 concept + implementation | [GitHub commit history](https://github.com/davidangularme/cortex-protocol/commits/main) |
+| March 13 | V2 deployed to Base Mainnet, 31 tests | [0xa982271E on BaseScan](https://basescan.org/address/0xa982271E80fa355BAb2cc863E3CEc0F2D03049e4) |
+| March 14-15 | V3 Reasoning Duels, 22 tests, deployed | [0x676fda7c on BaseScan](https://basescan.org/address/0x676fda7c91767eb1bad9a479af542fda7343bd31) |
+| March 16 | V4 Reasoning Bonds, 14 tests, deployed | [0x591545c0 on BaseScan](https://basescan.org/address/0x591545c05b0c8de97ed012befc8c1af6ef76e94e) |
+| March 16 | Paper published on Zenodo | [DOI: 10.5281/zenodo.19003627](https://doi.org/10.5281/zenodo.19003627) |
+| March 16 | ERC-8004 Agent #29822 registered | [Registry TX on BaseScan](https://basescan.org/tx/0x70548cefc0855cfbc37c51661ce0e73b845b6b7564bf83cefa5dc8669fad7262) |
+| March 16 | Full demo: 3 agents, bonded traces, duel resolved | On-chain transaction history |
 
 ---
 
