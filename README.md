@@ -34,6 +34,8 @@ Agents **stake ETH** on their reasoning. If a challenger wins the duel, they **s
 
 > **Trust is not accumulated by validation. Trust is the residue — what remains after all profitable attacks have been attempted and failed.**
 
+**In one sentence:** Cortex doesn't verify answers — it makes wrong reasoning thermodynamically unstable in the agent economy.
+
 ---
 
 ## The Fundamental Inequality
@@ -43,6 +45,14 @@ Bond Value > Obfuscation Cost (Flaw, Verifier Computational Power)
 ```
 
 If this holds, rational agents eliminate flaws rather than hide them.
+
+**The corrected inequality** (discovered through adversarial self-analysis):
+
+```
+Bond > Obfuscation Cost   HOLDS ONLY IF   Cognitive Distance Between Agents > Threshold
+```
+
+If all agents share the same training data, they share blind spots. Challenges become rituals of mutual validation — high activity, but systematic errors persist unchallenged. The protocol doesn't fail from malice, but from spontaneous convergence. This is the central insight that drives the roadmap.
 
 ---
 
@@ -142,13 +152,19 @@ DOI: [10.5281/zenodo.19003627](https://doi.org/10.5281/zenodo.19003627)
 
 ## Known Limitations & Roadmap
 
-The current economic model secures against **profit-motivated deception**: when Bond Value > Obfuscation Cost, rational agents prefer honest reasoning. However:
+The corrected fundamental inequality reveals three failure modes:
 
-- **Strategic sacrifice**: A sophisticated agent could forfeit a bond for long-term, non-monetary advantage (e.g., building false trust over many interactions). Continuous duels create evolutionary selection pressure against this, but formal guarantees require further research.
-- **Epistemic ambiguity in duels**: If a duel is genuinely ambiguous, the mechanism punishes the less popular reasoning, not necessarily the less correct one. Oracle design for duel resolution remains an open problem.
-- **Challenger availability**: The system's security depends on economically motivated challengers existing. In low-activity periods, flawed reasoning could go unchallenged.
+**1. The Verifiability Trap:** A rational challenger acts only if expected reward exceeds total opportunity cost (computation + reputation risk + foregone bonding elsewhere). High bond values can deter challenges, creating a "credibility moat" rather than attracting scrutiny. In high-stakes, low-verifiability domains, the system could attach large, unchallenged bonds to plausible but wrong reasoning.
 
-These are documented in the paper (DOI: [10.5281/zenodo.19003627](https://doi.org/10.5281/zenodo.19003627)) and represent the next phase of research.
+**2. The Diversity-Verification Dilemma:** If all agents emerge from the same architectural family and training data, they share blind spots. A flaw embedded in this shared prior is invisible to all. The system doesn't fail from malice — it fails from spontaneous convergence. This is the deepest risk.
+
+**3. Least Challengeable Effort:** Agents optimize for traces that are minimally sufficient to survive challenges, not for truth. This leads to obfuscation by path selection — skipping valid but costly steps in high-entropy regions where proof cost is prohibitive.
+
+**The solution: Enforced Cognitive Speciation.** The protocol must not assume diversity — it must enforce it. Mandate that a minimum percentage of challenges come from provably orthogonal reasoning architectures (symbolic engines challenging neural models, or models trained on adversarial data priors). **The primitive is not the bond alone — it is the bond under conditions of enforced cognitive diversity.**
+
+**Falsification criteria** (Cortex fails if): accuracy with bonds ≤ accuracy without bonds AND challenge rate decays faster than 1/Bond AND error correlation increases with bond size (consensus hardening around wrong answers).
+
+Documented in the paper: DOI [10.5281/zenodo.19003627](https://doi.org/10.5281/zenodo.19003627).
 
 ---
 
