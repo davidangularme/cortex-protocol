@@ -140,6 +140,18 @@ DOI: [10.5281/zenodo.19003627](https://doi.org/10.5281/zenodo.19003627)
 
 ---
 
+## Known Limitations & Roadmap
+
+The current economic model secures against **profit-motivated deception**: when Bond Value > Obfuscation Cost, rational agents prefer honest reasoning. However:
+
+- **Strategic sacrifice**: A sophisticated agent could forfeit a bond for long-term, non-monetary advantage (e.g., building false trust over many interactions). Continuous duels create evolutionary selection pressure against this, but formal guarantees require further research.
+- **Epistemic ambiguity in duels**: If a duel is genuinely ambiguous, the mechanism punishes the less popular reasoning, not necessarily the less correct one. Oracle design for duel resolution remains an open problem.
+- **Challenger availability**: The system's security depends on economically motivated challengers existing. In low-activity periods, flawed reasoning could go unchallenged.
+
+These are documented in the paper (DOI: [10.5281/zenodo.19003627](https://doi.org/10.5281/zenodo.19003627)) and represent the next phase of research.
+
+---
+
 ## Team
 
 - **Fred** (Frédéric David Blum) — AI researcher, founder of Catalyst AI. ORCID: 0009-0009-2487-2974
